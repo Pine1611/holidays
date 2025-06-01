@@ -29,6 +29,7 @@ app.use(cors(corsOptions));
 app.disable("x-powered-by");
 app.use(express.json());
 app.use(helmet());
+app.use(express.static("./docs"));
 
 /**
  * @description Begin for API routes

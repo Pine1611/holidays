@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+
+    <title>National holidays API - You've ripped a hole in the fabric of the internet. Love, from Pine!</title>
+
+    <meta name="description" content="API returns a list of National holidays in JSON format" />
+    <meta name="keywords" content="api, express-js, nodejs, json, national-holidays, google-calendar" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="author" content="Pine!" />
+    <link rel="icon" type="favicon" href="assets/images/fav-ico.gif" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/marx.min.css" />
+
+</head>
+
+<body>
+    <main>
+        <h1>National Holidays API</h1>
+        <p>This API returns a list of National holidays in JSON format. The data is automatically generated from
+            information provided by Google Calendar. Data for last year, this year, and next year is available.</p>
+
+        <h2>API URLs</h2>
+        <p>Get a list of National Holidays for last year, this year and next year base on country code or get by year.
+        </p>
+        <pre><code>{server}/api/v1/holidays/{country-code}
+{server}/api/v1/holidays/{country-code}/{year}</code></pre>
+
+        <h2>Example data</h2>
+        <h4>National holidays API (date)</h4>
+        <pre><code>{
+    "2025-04-30": "Liberation Day/Reunification Day",
+    "2025-05-01": "International Labor Day",
+    "2025-05-02": "International Labor Day Holiday",
+}</code></pre>
+        <p>Returns an object containing the names of holidays using the date as a key.</p>
+
+        <hr>
+        <h2>License</h2>
+        <p>MIT</p>
+    </main>
+
+    <footer>
+        by I am Pine, <a href="https://ipine.net">ipine.net</a><br>
+    </footer>
+</body>
+
+</html>
