@@ -21,23 +21,37 @@
 <body>
     <main>
         <h1>National Holidays API</h1>
-        <p>This API returns a list of National holidays in JSON format. The data is automatically generated from
-            information provided by Google Calendar. Data for last year, this year, and next year is available.</p>
+        <p>This API returns a list of National holidays in JSON format. The data provided by Google Calendar and
+            automatically parsed from iCAL format to JSON format. Data for last year, this year, and next year is
+            available. Yearly data will be stored separately by directory.</p>
 
         <h2>API URLs</h2>
-        <p>Get a list of National Holidays for last year, this year and next year base on country code or get by year.
-        </p>
         <pre><code>{server}/api/v1/holidays/{country-code}
 {server}/api/v1/holidays/{country-code}/{year}</code></pre>
 
         <h2>Example data</h2>
-        <h4>National holidays API (date)</h4>
+        <h5>National holidays basic API (date format only)</h5>
+        <p>
+            <a
+                href="https://pine1611.github.io/holidays/api/v1/vn/date.json">https://pine1611.github.io/holidays/api/v1/vn/date.json</a>
+        </p>
         <pre><code>{
     "2025-04-30": "Liberation Day/Reunification Day",
     "2025-05-01": "International Labor Day",
     "2025-05-02": "International Labor Day Holiday",
 }</code></pre>
         <p>Returns an object containing the names of holidays using the date as a key.</p>
+
+        <h5>Yearly API (date format only)</h5>
+        <p>To ensure clear organization and efficient access, yearly data will be stored separately in its own
+            directory. For specify the year, it would be similar to the basic API just add the year after it.</p>
+        <p>
+            <a
+                href="https://pine1611.github.io/holidays/api/v1/vn/2025/date.json">https://pine1611.github.io/holidays/api/v1/vn/2025/date.json</a>
+        </p>
+
+        <p>In the above URL 2025, specify the year in four digits. Returns only the data for the specified year. The
+            return format is the same as the basic API (date format only).</p>
 
         <hr>
         <h2>License</h2>
