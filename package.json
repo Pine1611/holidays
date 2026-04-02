@@ -1,7 +1,8 @@
 {
-    "name": "holidays-calendar-api",
+    "name": "@apps/holidays-calendar-api",
     "version": "1.0.0",
     "description": "API holidays calendar",
+    "private": true,
     "main": "server.mjs",
     "type": "module",
     "scripts": {
