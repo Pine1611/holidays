@@ -3,11 +3,11 @@ import cors from "cors";
 import helmet from "helmet";
 import { createServer } from "http";
 
-import { SERVER_PORT } from "./src/configs/global.mjs";
+import { SERVER_PORT } from "./configs/global.mjs";
 
-import { notFound } from "./src/middlewares/notFound.mjs";
-import { handleError } from "./src/middlewares/handleError.mjs";
-import IndexAPI from "./src/resources/index.mjs";
+import { notFound } from "./middlewares/notFound.mjs";
+import { handleError } from "./middlewares/handleError.mjs";
+import IndexAPI from "./resources/index.mjs";
 
 /**
  * @description initial configs server
@@ -17,10 +17,7 @@ const PORT = SERVER_PORT;
 const app = express();
 const server = createServer(app);
 
-const corsOptions = {
-    origin: `https://localhost:${PORT}`,
-    optionsSuccessStatus: 200,
-};
+const corsOptions = { origin: `https://localhost:${PORT}`, optionsSuccessStatus: 200 };
 
 /**
  * @description import middlewares
